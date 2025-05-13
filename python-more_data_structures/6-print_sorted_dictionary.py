@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-def sort_dict_by_keys(a_dictionary):
-    sorted_dict = {}
+def print_sorted_dictionary(a_dictionary):
     for key in sorted(a_dictionary):
-        sorted_dict[key] = a_dictionary[key]
-    return sorted_dict
+        print(f"{key}: {a_dictionary[key]}")
