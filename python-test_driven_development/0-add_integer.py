@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 """
 This module provides a function to add two numbers.
-
 The function ensures that inputs are either integers or floats,
 and it casts float inputs to integers before performing the addition.
 It handles float overflow situations by checking if the number exceeds 
 the floating-point limit (infinity), and also checks for NaN (Not a Number).
 """
-
-import math
 
 def add_integer(a, b=98):
     """
@@ -28,17 +25,16 @@ def add_integer(a, b=98):
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
-
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-
-    # Check for NaN (Not a Number)
-    if math.isnan(a):
+    
+    # Check for NaN (Not a Number) using a direct comparison
+    if a != a:  # NaN is not equal to itself
         raise ValueError("a cannot be NaN")
     
-    if math.isnan(b):
+    if b != b:  # NaN is not equal to itself
         raise ValueError("b cannot be NaN")
-
+    
     # Check for float overflow (if a or b is infinity)
     if (isinstance(a, float) and (a == float('inf') or a == -float('inf'))) or \
        (isinstance(b, float) and (b == float('inf') or b == -float('inf'))):
