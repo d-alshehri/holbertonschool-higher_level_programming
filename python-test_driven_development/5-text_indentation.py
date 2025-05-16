@@ -3,7 +3,7 @@
 
 
 def text_indentation(text):
-    """Print text with two newlines after each '.', '?', and ':' punctuation marks.
+    """Print text with two newlines after '.', '?', ':'
 
     Args:
         text (str): The text to print.
