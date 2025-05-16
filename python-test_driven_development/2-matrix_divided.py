@@ -6,8 +6,8 @@ def matrix_divided(matrix, div):
     """Divides all elements of a matrix by a given number.
 
     Args:
-        matrix (list of lists): A matrix (list of lists) containing integers or floats.
-        div (int or float): The number by which to divide all elements of the matrix.
+        matrix (list of lists): A matrix containing integers or floats.
+        div (int or float): The number that divide all elements of the matrix.
 
     Raises:
         TypeError: If matrix is not a list of lists of integers/floats.
