@@ -3,9 +3,11 @@
 This module provides a function to add two numbers.
 The function ensures that inputs are either integers or floats,
 and it casts float inputs to integers before performing the addition.
-It handles float overflow situations by checking if the number exceeds 
+It handles float overflow situations by checking if the number exceeds
 the floating-point limit (infinity), and also checks for NaN (Not a Number).
 """
+
+
 def add_integer(a, b=98):
     """Return the integer addition of a and b.
 
