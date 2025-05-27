@@ -1,0 +1,9 @@
+guillaume@ubuntu:~/$ ./1-main.py
+[1, 4, 2, 3, 5]
+[1, 2, 3, 4, 5]
+[1, 4, 2, 3, 5]
+
+This test confirms that:
+- MyList inherits from list,
+- print_sorted() prints the sorted list,
+- The original list is unchanged.
