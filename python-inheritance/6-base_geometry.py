@@ -8,6 +8,9 @@ class BaseGeometry:
     """
     Base class with placeholder for area calculation.
     """
-        def area(self):
-        "raise Exception with the required message"
+
+    def area(self):
+        """
+        Raise an exception indicating the method is not implemented.
+        """
         raise Exception("area() is not implemented")
