@@ -25,18 +25,14 @@ class Student:
 
     def to_json(self, attrs=None):
 
-        """
-        Returns a dictionary representation of the instance.
-        If attrs is a list of strings, only return those attributes.
-
-        Args:
-            attrs (list or None): List of attribute names to retrieve.
-
-        Returns:
-            dict: A dictionary of selected or all attributes.
-        """
-        if isinstance(attrs, list) and
-        all(isinstance(attr, str) for attr in attrs):
-            return
-            {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
-        return self.__dict__
+    """
+    Returns a dictionary representation of the instance.
+    If attrs is a list of strings, only return those attributes.
+    """
+    if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
+        filtered = {}
+        for attr in attrs:
+            if hasattr(self, attr):
+                filtered[attr] = getattr(self, attr)
+        return filtered
+    return self.__dict__
